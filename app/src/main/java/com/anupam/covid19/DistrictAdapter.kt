@@ -1,4 +1,4 @@
-package com.anupam.covid19;
+package com.anupam.covid19
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,9 +10,8 @@ import java.util.*
 
 class DistrictAdapter(
     private val context: Context,
-    districtItemArrayList: ArrayList<States>
-) : RecyclerView.Adapter<DistrictAdapter.ViewHolder>() {
     private val districtItemArrayList: ArrayList<States>
+) : RecyclerView.Adapter<DistrictAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -45,22 +44,12 @@ class DistrictAdapter(
 
     inner class ViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
-        var state: TextView
-        var confirm: TextView
-        var active: TextView
-        var recovered: TextView
-        var death: TextView
+        var state: TextView = itemView.findViewById(R.id.stateName)
+        var confirm: TextView = itemView.findViewById(R.id.confirmNo)
+        var active: TextView = itemView.findViewById(R.id.activeNo)
+        var recovered: TextView = itemView.findViewById(R.id.recoveredNo)
+        var death: TextView = itemView.findViewById(R.id.deathNo)
 
-        init {
-            state = itemView.findViewById(R.id.stateName)
-            confirm = itemView.findViewById(R.id.confirmNo)
-            active = itemView.findViewById(R.id.activeNo)
-            recovered = itemView.findViewById(R.id.recoveredNo)
-            death = itemView.findViewById(R.id.deathNo)
-        }
     }
 
-    init {
-        this.districtItemArrayList = districtItemArrayList
-    }
 }

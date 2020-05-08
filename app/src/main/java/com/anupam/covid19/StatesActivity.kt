@@ -1,3 +1,5 @@
+@file:Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
 package com.anupam.covid19
 
 import android.os.Bundle
@@ -10,16 +12,17 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import org.json.JSONArray
 import java.util.*
 
 class StatesActivity : AppCompatActivity() {
-    var stateNameTextView: TextView? = null
-    var statesConfirmTextView: TextView? = null
-    var statesRecoveredTextView: TextView? = null
-    var statesDeathTextView: TextView? = null
+    private lateinit var stateNameTextView: TextView
+    private lateinit var statesConfirmTextView: TextView
+    private lateinit var statesRecoveredTextView: TextView
+    private lateinit var statesDeathTextView: TextView
     private lateinit var districtRV: RecyclerView
-    var stateName: String? = null
-    private var requestQueue: RequestQueue? = null
+    private lateinit var stateName: String
+    private lateinit var requestQueue: RequestQueue
     private val arrayList = ArrayList<States>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +41,7 @@ class StatesActivity : AppCompatActivity() {
                     try {
                         val state = response.getJSONObject(stateName)
                         val districtData = state.getJSONObject("districtData")
-                        val keys = districtData.names()
+                        val keys: JSONArray = districtData.names()
                         for (i in 0 until keys.length()) {
                             val district = keys.getString(i)
                             val confirmed =
@@ -60,25 +63,25 @@ class StatesActivity : AppCompatActivity() {
                         e.printStackTrace()
                     }
                 }, Response.ErrorListener { })
-        requestQueue!!.add(jsonObjectRequest)
+        requestQueue.add(jsonObjectRequest)
     }
 
     private val intentData: Unit
-        private get() {
+        get() {
             stateName = intent.getStringExtra("state")
-            stateNameTextView!!.text = stateName
-            statesConfirmTextView!!.text = intent.getStringExtra("confirm")
-            statesRecoveredTextView!!.text = intent.getStringExtra("recovered")
-            statesDeathTextView!!.text = intent.getStringExtra("death")
+            stateNameTextView.text = stateName
+            statesConfirmTextView.text = intent.getStringExtra("confirm")
+            statesRecoveredTextView.text = intent.getStringExtra("recovered")
+            statesDeathTextView.text = intent.getStringExtra("death")
         }
 
     private fun bindViews() {
-        stateNameTextView = findViewById(R.id.stateNameTextView)
+        this.stateNameTextView = findViewById(R.id.stateNameTextView)
         statesConfirmTextView = findViewById(R.id.statesConfirmedTextView)
         statesRecoveredTextView = findViewById(R.id.statesRecoveredTextView)
         statesDeathTextView = findViewById(R.id.statesDeathTextView)
         districtRV = findViewById(R.id.districtRV)
-        districtRV.setLayoutManager(LinearLayoutManager(this))
+        districtRV.layoutManager = LinearLayoutManager(this)
         requestQueue = Volley.newRequestQueue(this)
     }
 }

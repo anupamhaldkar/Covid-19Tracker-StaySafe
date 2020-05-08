@@ -10,9 +10,20 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="60dp"
+            android:text="STAY SAFE"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/holo_purple"
+            android:textSize="50dp" />
 
         <ImageView
             android:id="@+id/imageView"
+            android:usesCleartextTraffic="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -21,13 +32,13 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center_horizontal|bottom"
-            android:text="Covid-19 Tracker"
+            android:text="COVID19 Tracker"
             android:layout_marginBottom="95dp"
             android:textStyle="bold"
             android:textSize="35sp"
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayout"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 

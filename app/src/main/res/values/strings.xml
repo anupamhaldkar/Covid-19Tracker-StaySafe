@@ -1,3 +1,6 @@
-<resources>
+<resources xmlns:text-alignment="http://schemas.android.com/apk/res-auto">
     <string name="app_name">COVID-19 Tracker</string>
+    <string name="last_update">\Recent Updated On: </string>
+    <string name="india_bharat">INDIA-भारत</string>
+    <string name="ahdev" >"          "  by AHDev</string>
 </resources>

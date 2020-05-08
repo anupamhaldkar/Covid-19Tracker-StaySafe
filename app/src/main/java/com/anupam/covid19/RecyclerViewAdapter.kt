@@ -40,18 +40,13 @@ class RecyclerViewAdapter internal constructor(
 
     inner class RecyclerViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
-        var state: TextView
-        var confirm: TextView
-        var active: TextView
-        var recovered: TextView
-        var death: TextView
+        var state: TextView = itemView.findViewById(R.id.stateName)
+        var confirm: TextView = itemView.findViewById(R.id.confirmNo)
+        var active: TextView = itemView.findViewById(R.id.activeNo)
+        var recovered: TextView = itemView.findViewById(R.id.recoveredNo)
+        var death: TextView = itemView.findViewById(R.id.deathNo)
 
         init {
-            state = itemView.findViewById(R.id.stateName)
-            confirm = itemView.findViewById(R.id.confirmNo)
-            active = itemView.findViewById(R.id.activeNo)
-            recovered = itemView.findViewById(R.id.recoveredNo)
-            death = itemView.findViewById(R.id.deathNo)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, StatesActivity::class.java)
                 intent.putExtra("state", state.text.toString())

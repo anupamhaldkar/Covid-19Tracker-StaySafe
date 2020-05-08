@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#fedbd0"
     tools:context=".StatesActivity">
 
     <TextView
@@ -25,12 +26,12 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
@@ -42,6 +43,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Confirmed"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="15sp"/>
 
             <TextView
@@ -58,8 +60,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
@@ -69,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Recovered"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp"/>
@@ -87,8 +90,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
@@ -100,6 +103,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:text="Death"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="15sp" />
 
             <TextView
