@@ -286,7 +286,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_width="105dp"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:textSize="15sp"
             android:padding="5dp"
@@ -297,7 +297,7 @@
             android:textColor="#000"
             android:background="#fff"/>
         <TextView
-            android:layout_width="55dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:gravity="center"
             android:textStyle="bold"
@@ -308,7 +308,7 @@
             android:textColor="@android:color/holo_red_dark"
             android:background="#fff"/>
         <TextView
-            android:layout_width="55dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:gravity="center"
             android:textStyle="bold"
@@ -319,7 +319,7 @@
             android:textColor="@android:color/holo_blue_dark"
             android:background="#fff"/>
         <TextView
-            android:layout_width="55dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:gravity="center"
             android:textStyle="bold"
@@ -331,7 +331,7 @@
             android:background="#fff"/>
 
         <TextView
-            android:layout_width="55dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:gravity="center"
             android:textStyle="bold"
